@@ -33,7 +33,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{url('/dashbord/index')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -49,14 +49,28 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseone"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                    aria-expanded="true" aria-controls="collapseone">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Product_category</span>
                 </a>
                 <div id="collapseone" class="collapse" aria-labelledby="headingone" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Product-category-List </a>
-                        <a class="collapse-item" href="dashbord/productscat/index.blade.php">Product-category-Insert </a>
+                        <a class="collapse-item" href="{{('/dashbord/product-category')}}">Product-category-List </a>
+                        <a class="collapse-item" href="{{url('/dashbord/add-product-category')}}">Product-category-Insert </a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Product</span>
+                </a>
+                <div id="collapsetwo" class="collapse" aria-labelledby="headingone" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{url('/dashbord/product')}}">Product List </a>
+                        <a class="collapse-item" href="{{url('/dashbord/add-product')}}">Product Insert </a>
 
                     </div>
                 </div>

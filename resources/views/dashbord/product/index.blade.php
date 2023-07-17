@@ -220,7 +220,7 @@
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">All Pruduct Category List</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">All Pruduct List</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -230,26 +230,35 @@
                                     <th>#</th>
                                     <th>Title</th>
                                     <th>Image</th>
+                                    <th>Description</th>
+                                    <th>Product Category</th>
+                                    <th>Satuts</th>
                                     <th>Created</th>
                                     <th>Action</th>
                                     </tr>
                             </thead>
 
                             <tbody>
-                                @foreach ($data as $item)
-                                <tr>
-                                    <td>{{$item->catid}}</td>
-                                    <td>{{$item->catname}}</td>
-                                    <td><img src="{{url('/')}}/{{$item->catimg}}" width="50px" alt=""></td>
-                                    <td>{{$item->created_at}}</td>
-                                    <td>
-                                        <a href="{{url('/dashbord/edit-product-category')}}/{{$item->catid}}" class="btn btn-success">Edit</a>
-                                        <a href="{{url('/dashbord/delete-product-category')}}/{{$item->catid}}" class="btn btn-danger">Remove</a>
-                                    </td>
+
+                        @foreach ($data as $st  )
+
+                     <td> {{$st->pid}}</td>
+                     <td>{{$st->pname}}</td>
+                     <td><img src="{{url('/')}}/{{$st->pimg}}" width="50px" alt=""></td>
+                     <td>{{$st->pdesc}}</p></td>
+                     <td>{{$st->catname}}</td>
+                     <td>{{$st->status}}</td>
+                     <td>{{$st->created_at}}</td>
+                     <td>
+                            <a href="{{url('/dashbord/edit-product')}}/{{$st->pid}}" class="btn btn-success">Edit</a>
+                            <a href="{{url('/dashbord/delete-product-category')}}/{{$st->pid}}" class="btn btn-danger">remove</a>
+                        </td>
+
+
                                 </tr>
+
                                 @endforeach
                             </tbody>
-
                         </table>
                     </div>
                 </div>

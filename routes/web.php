@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\productcatcontroller;
+use App\Http\Controllers\productcontroller;
 use App\Http\Controllers\dashbordcontroller;
 
 
@@ -25,4 +26,11 @@ Route::get('/dashbord/add-product-category',[productcatcontroller::class,'addpro
 Route::post('/dashbord/store-product-category',[productcatcontroller::class,'storeproductcategory']);
 Route::get('/dashbord/edit-product-category/{id}',[productcatcontroller::class,'editproductcategory']);
 Route::post('/dashbord/update-product-category/{id}',[productcatcontroller::class,'updateproductcategory']);
-Route::get('/dashbord/delete-product-category{id}',[productcatcontroller::class,'deleteproductcategory']);
+Route::get('/dashbord/delete-product-category/{id}',[productcatcontroller::class,'deleteproductcategory']);
+
+Route::get('/dashbord/product',[productcontroller::class,'product']);
+Route::get('/dashbord/add-product',[productcontroller::class,'addproduct']);
+Route::post('/dashbord/store-product',[productcontroller::class,'storeproduct']);
+Route::get('/dashbord/edit-product/{id}',[productcontroller::class,'editproduct']);
+Route::post('/dashbord/update-product/{id}',[productcontroller::class,'updateproduct']);
+Route::get('/dashbord/delete-product/{id}',[productcontroller::class,'deleteproduct']);
